@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+  <video id="player" style="width: 640px; height: 480px; border-radius: 1px" muted controls='true' autoplay playsinline>
+  </video>
+
+
+  <div class="container">
+    <table>
+      <tr>
+        <td>
+        <video id="preview" style="width: 640px; height: 480px;" autoplay playsinline></video>
+        <td>
+        <video id="preview-player" style="width: 640px; height: 480px;" autoplay></video>
+      </tr>
+    </table
+    <div class="controls">
+      <select id="quality">
+        <option value="4:3:240">4:3 320x240</option>
+        <option value="4:3:360">4:3 480x360</option>
+        <option value="4:3:480">4:3 640x480</option>
+        <option value="16:9:360" selected>16:9 640x360</option>
+        <option value="16:9:540">16:9 960x540</option>
+        <option value="16:9:720">16:9 1280x720 HD</option>
+      </select>
+      <input name="name" id="streamName" value="pub1/STREAMNAME" />
+      <button id="startStream">Start Streaming</button>
+      <button id="stopStream">Stop Streaming</button>
+    </div>
+    <div class="errorMessageContainer" id="errorMessageContainer"></div>
+  </div>
+
+  </body>
+</html>
